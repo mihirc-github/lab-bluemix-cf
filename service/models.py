@@ -38,6 +38,7 @@ from retry import retry
 from cloudant.client import Cloudant
 from cloudant.query import Query
 from requests import HTTPError, ConnectionError
+from cloudant.adapters import Replay429Adapter
 
 # get configruation from enviuronment (12-factor)
 ADMIN_PARTY = os.environ.get('ADMIN_PARTY', 'False').lower() == 'true'
